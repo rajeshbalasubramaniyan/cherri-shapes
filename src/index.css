@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Handy Casual';
+  src: url('/fonts/HandyCasualRegular.otf') format('opentype'),
+       url('/fonts/HandyCasualRegular.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-cherry: #FF0000;
+  --color-sky: #38BDF8;
+  --color-sky-light: #BAE6FD;
+  --color-sky-dark: #0284C7;
+  --color-sunny: #FBBF24;
+  --color-sunny-light: #FDE68A;
+  --color-grass: #4ADE80;
+  --color-grass-dark: #16A34A;
+  --color-coral: #FB7185;
+  --color-coral-light: #FECDD3;
+  --color-grape: #A78BFA;
+  --color-grape-light: #DDD6FE;
+  --color-tangerine: #FB923C;
+  --color-ink: #1E293B;
+  --color-ink-soft: #475569;
+  --color-cloud: #FFFFFF;
+  --color-cream: #FFFBF2;
+  --font-display: 'Handy Casual', 'Fredoka', sans-serif;
+  --font-body: 'Poppins', 'Nunito', sans-serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  body {
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(180deg, #E0F2FE 0%, #FEF9EF 100%);
+    color: var(--color-ink);
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
