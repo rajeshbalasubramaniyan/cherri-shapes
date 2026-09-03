@@ -74,6 +74,33 @@ export const LEVELS = [
     emoji: '📏',
     color: '#FBBF24',
   },
+  {
+    id: 'area',
+    game: 'area',
+    title: 'Fill It Up',
+    blurb: 'Cover the shape to find its area',
+    band: '8-10',
+    emoji: '🟨',
+    color: '#F59E0B',
+  },
+  {
+    id: 'triangles',
+    game: 'triangles',
+    title: 'Triangle Types',
+    blurb: 'Equal, twin, or all different?',
+    band: '8-10',
+    emoji: '🔻',
+    color: '#EF4444',
+  },
+  {
+    id: 'quads',
+    game: 'quads',
+    title: 'The Quad Family',
+    blurb: 'Squares, rhombuses & friends',
+    band: '9-11',
+    emoji: '🔷',
+    color: '#8B5CF6',
+  },
 ]
 
 export const BANDS = ['4-7', '6-8', '7-10', '8-10']

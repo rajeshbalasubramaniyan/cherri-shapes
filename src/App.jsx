@@ -9,6 +9,9 @@ import SymmetryGame from './pages/SymmetryGame'
 import AnglesGame from './pages/AnglesGame'
 import SolidsGame from './pages/SolidsGame'
 import PerimeterGame from './pages/PerimeterGame'
+import AreaGame from './pages/AreaGame'
+import TrianglesGame from './pages/TrianglesGame'
+import QuadsGame from './pages/QuadsGame'
 
 const PROGRESS_KEY = 'cherri-shapes-progress'
 
@@ -42,6 +45,9 @@ export default function App() {
     'angles': <AnglesGame onHome={goMap} onComplete={() => markDone('angles')} />,
     'solids': <SolidsGame onHome={goMap} onComplete={() => markDone('solids')} />,
     'perimeter': <PerimeterGame onHome={goMap} onComplete={() => markDone('perimeter')} />,
+    'area': <AreaGame onHome={goMap} onComplete={() => markDone('area')} />,
+    'triangles': <TrianglesGame onHome={goMap} onComplete={() => markDone('triangles')} />,
+    'quads': <QuadsGame onHome={goMap} onComplete={() => markDone('quads')} />,
   }
 
   return (
