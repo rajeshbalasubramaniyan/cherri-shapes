@@ -15,6 +15,7 @@ import TrianglesGame from './pages/TrianglesGame'
 import QuadsGame from './pages/QuadsGame'
 import { BANDS, getBand } from './curriculum'
 import { ENGINES } from './engines'
+import { SiteNav, SiteFooter } from './components/SiteChrome'
 
 const PROGRESS_KEY = 'cherri-shapes-progress-v2'
 const BAND_KEY = 'cherri-shapes-band'
@@ -93,6 +94,7 @@ export default function App() {
 
   return (
     <div className="relative min-h-[100dvh]">
+      {screen !== 'level' && <SiteNav current="shapes" />}
       {screen === 'welcome' && (
         <WelcomePage
           onStart={() => setScreen(band ? 'map' : 'picker')}
@@ -104,6 +106,7 @@ export default function App() {
         <BandMap band={band} progress={progress} onPlay={play} onChangeBand={() => setScreen('picker')} onHome={() => setScreen('welcome')} />
       )}
       {screen === 'level' && renderLevel()}
+      {screen !== 'level' && <SiteFooter current="shapes" />}
     </div>
   )
 }
