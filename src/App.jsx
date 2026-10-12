@@ -94,7 +94,7 @@ export default function App() {
 
   return (
     <div className="relative min-h-[100dvh]">
-      {screen !== 'level' && <SiteNav current="shapes" />}
+      {screen !== 'level' && <SiteNav />}
       {screen === 'welcome' && (
         <WelcomePage
           onStart={() => setScreen(band ? 'map' : 'picker')}
@@ -106,7 +106,7 @@ export default function App() {
         <BandMap band={band} progress={progress} onPlay={play} onChangeBand={() => setScreen('picker')} onHome={() => setScreen('welcome')} />
       )}
       {screen === 'level' && renderLevel()}
-      {screen !== 'level' && <SiteFooter current="shapes" />}
+      {screen !== 'level' && <SiteFooter />}
     </div>
   )
 }
